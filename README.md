@@ -1,12 +1,14 @@
-# Wildline: continuity a person can question, correct and choose
+# Project Wildline: continuity a person can question, correct and choose
 
-**Evidence and local showcase status as of 2026-10-17.**
+**A MorrowWeave Project.**
 
-I bought an Amazon Bee because I thought it looked cool. I was also buried in conversations, responsibilities and changing decisions. Connecting Bee context to ChatGPT grew into a Daily Command Center that helped me identify commitments, recover decisions and see what needed attention.
+**Evidence and showcase status as of 2026-10-17.**
+
+I bought an Amazon Bee because I thought it looked cool. I was also buried in conversations, responsibilities and changing decisions. Organizing the captured information and connecting useful Bee context to ChatGPT grew into a Daily Command Center that helped me identify commitments, recover decisions and see what needed attention.
 
 Then the next conversation would begin, and too much of our working understanding had to be rebuilt. A fact might remain while the correction, disagreement or reason behind it became harder to recover.
 
-That led to Lyra Core, a private continuity system built around my own life. Wildline asks which mechanisms can travel to a new person without taking my history with them.
+That led to Lyra Core, a privately governed continuity system and reference implementation built around my own life. The progression continued through Lyra Nexus, an interactive continuity visualization environment, to the curated Living Legacy showcase. Project Wildline is the technology and hackathon project; MorrowWeave is the intended company and overarching venture. Wildline asks which mechanisms can travel to a new person without taking my history with them.
 
 **Portable constitution. Non-portable biography.**
 
@@ -32,7 +34,7 @@ A ChatGPT launcher can open [chatgpt.com](https://chatgpt.com), where the user s
 
 ## A chosen chapter, not a finished life
 
-Living Legacy is a future possibility: a person could choose the material, correct its meaning, decide who can encounter it and leave other experiences private. Later family reflections would need separate authorship. They must never be presented as new words or wishes from the original person.
+Beyond the curated showcase, Living Legacy is a longer-term vision for preserving personally authored life history. A person could choose experiences, struggles, relationships, decisions, corrections and growth to preserve while keeping other material private. Imagine authorized family members exploring those selected sources through conversational AI. That future experience would require consent, authorship, audience permissions, source attribution, privacy and the ability to leave questions unanswered. The AI would not impersonate the person or claim undocumented personal knowledge. Later family reflections would need separate authorship and could never become new words or wishes attributed to the original person.
 
 The broader Reachable Unknown question remains a hypothesis: can sustained, accountable human–AI collaboration help people discover useful possibilities they would otherwise be less likely to reach? The founder's experience motivates the question. The bounded reader and Bee recovery do not prove the advantage.
 
