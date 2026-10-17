@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Wildline · Living Legacy</title><link rel="icon" href="data:,"><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./legacy.css"></head>
+<body class="legacy" data-source-mode="curated-review">
+<div class="space" aria-hidden="true"></div>
+<header class="topbar"><div class="brand"><div><div class="brand-name">LIVING LEGACY</div><div class="brand-sub">WILDLINE · CONTINUITY WITHOUT CAPTIVITY</div></div></div>
+<button id="toggleLeft" class="icon-button panel-toggle" aria-label="Open chapters" aria-expanded="false" aria-controls="navigationPanel" title="Chapters">‹</button>
+<button id="toggleRight" class="icon-button panel-toggle" aria-label="Open story panel" aria-expanded="false" aria-controls="detailsPanel" title="Story panel">›</button>
+<div class="search-wrap"><label class="searchbox"><span aria-hidden="true">⌕</span><input id="searchInput" aria-label="Search the curated story" placeholder="Find a footstep…" autocomplete="off"><kbd>/</kbd></label><div id="searchResults" class="search-results" hidden></div></div>
+<button id="fullscreenButton" class="icon-button" aria-label="Enter fullscreen" title="Fullscreen">⛶</button><button id="helpButton" class="icon-button" aria-label="Show showcase guide">?</button></header>
+<div id="graphWorld" class="graph-world"><canvas id="graphCanvas" tabindex="0" aria-label="Interactive Living Legacy Galaxy. Drag to orbit, scroll to zoom, or use search and the record index."></canvas>
+<div class="graph-heading"><div class="eyebrow">LYRA NEXUS · LIVING LEGACY</div></div>
+<div class="graph-summary"><span><b id="visibleNodes">0</b> curated records</span><span><b id="visibleLinks">0</b> links</span><span id="lensLabel">All chapters</span></div>
+<div id="graphTooltip" class="graph-tooltip" hidden></div>
+<div id="traceBanner" class="trace-banner" hidden><p id="traceText"></p><button id="clearTrace" class="icon-button" aria-label="Clear footsteps">×</button></div>
+<div class="graph-bottom"><div class="graph-tools" aria-label="Galaxy controls">
+<button id="resetCamera" class="icon-button" aria-label="Reset orbit" title="Reset orbit">↶</button><div class="tool-sep"></div>
+<button id="zoomOut" class="icon-button" aria-label="Zoom out">−</button><span id="zoomLabel" class="zoom-label">100%</span><button id="zoomIn" class="icon-button" aria-label="Zoom in">+</button><div class="tool-sep"></div>
+<button id="motionButton" class="icon-button" aria-label="Pause rotation" title="Pause rotation">Ⅱ</button><button id="labelsButton" class="icon-button" aria-label="Show record labels" aria-pressed="false" title="Labels">◉</button><div class="tool-sep"></div>
+<button id="footstepsButton" class="text-button">Follow the Footsteps</button></div>
+<div class="timeline"><button id="previousStep" class="icon-button" aria-label="Previous story step">‹</button><input id="timeRange" type="range" min="0" max="0" value="0" aria-label="Curated story position"><button id="nextStep" class="icon-button" aria-label="Next story step">›</button><div class="time-text"><strong id="timeLabel">Origins</strong><span>CURATED READING ORDER</span></div></div>
+<div class="graph-tip">Drag to orbit · Scroll to zoom · Select a star to explore</div></div></div>
+<aside id="navigationPanel" class="legacy-panel legacy-navigation glass" aria-label="Story chapters" hidden><div class="section-label">SEVEN CHAPTERS · ONE JOURNEY</div><nav id="chapterNav"></nav><button id="showIndex" class="secondary-button">Explore every footstep</button><p class="microcopy">Chapter lines organize the story. They are navigation, not evidence of causality.</p></aside>
+<aside id="detailsPanel" class="legacy-panel legacy-details glass" aria-label="Selected story" hidden><div id="inspectorBody"></div></aside>
+<button id="lyraButton" class="lyra-launcher" aria-label="LYRA — open ChatGPT Voice launcher" title="Open ChatGPT; start Voice manually"><img src="./assets/lyra-approved-v1.png" alt="LYRA" width="140" height="140"></button>
+<footer class="footer"><span id="reviewBadge" class="legacy-review-badge">LOADING CURATED CONTENT</span><span id="datasetVersion">Loading curated sources…</span><span class="legacy-footer-hint">Local story · No AI processing</span></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<dialog id="sourceDialog" aria-labelledby="sourceTitle"><div class="dialog-heading"><h2 id="sourceTitle">Behind this footstep</h2><button id="sourceClose" class="icon-button" aria-label="Close source inspection">×</button></div><div id="sourceContent"></div></dialog>
+<dialog id="indexDialog" aria-labelledby="indexTitle"><div class="dialog-heading"><h2 id="indexTitle">Every footstep</h2><button id="indexClose" class="icon-button" aria-label="Close record index">×</button></div><p>Selected, source-grounded paraphrases. Publication requires separate approval.</p><div id="indexContent" class="connections"></div></dialog>
+<dialog id="voiceDialog" aria-labelledby="voiceTitle"><div class="dialog-heading"><h2 id="voiceTitle">Continue the conversation</h2><button id="voiceClose" class="icon-button" aria-label="Close Voice instructions">×</button></div><p id="voiceInstruction"></p><p>ChatGPT opens separately. This launcher does not send the map, selected stars or source records to ChatGPT. Voice does not know the selected map context.</p><p class="microcopy">Your browser may open a tab instead of a compact window, or block the popup.</p><a class="secondary-button" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Open ChatGPT</a></dialog>
+<dialog id="helpDialog" aria-labelledby="helpTitle"><div class="dialog-heading"><h2 id="helpTitle">The footsteps between moments</h2><button id="helpClose" class="icon-button" aria-label="Close showcase guide">×</button></div>
+<p>A life is more than captured moments. Explore the decisions, corrections, discoveries and experiences behind a project’s becoming.</p><p>What happened → What was understood → What was challenged → What changed → What followed → Why it mattered.</p>
+<p>These are curated paraphrases of selected sources. Source panels distinguish documented implementation, founder accounts, experiments and future vision. The story slider follows editorial reading order; missing historical dates remain unknown.</p>
+<p>Solid record links are documented progression or correction references. Dotted links are thematic reading connections. Chapter lines and orbital dust are visual navigation. None asserts causality.</p>
+<p>Drag to orbit, release to drift, scroll to zoom. Use chapters, search, the record index, or Follow the Footsteps. Left and right arrows open or close the side panels. Press / to search, R to reset, Space to pause, or Escape to close panels.</p>
+<p class="microcopy">The public package is independent static presentation data. No Core or Bee API, private graph database, generation or embedding service is available to it. The LYRA button only opens ChatGPT.</p></dialog>
+<noscript>This interactive Galaxy requires JavaScript. No private sources or AI services are connected.</noscript>
+<script type="module" src="./legacy.js"></script></body></html>
