@@ -42,7 +42,7 @@ function panels(){
 }
 function neighbors(id){return edges.filter(e=>e.relationship&&(e.a===id||e.b===id)).map(edge=>({edge,node:byId.get(edge.a===id?edge.b:edge.a)}));}
 function emphasis(n){
- if(state.path.length)return state.path.includes(n.id)?1:n.core?.7:.2;
+ if(state.path.length)return state.path.includes(n.id)?1:n.core?.7:n.hub&&n.group===byId.get(state.selected)?.group?.7:.2;
  if(state.filter!=='all'&&n.group!==state.filter&&!n.core)return .12;
  if(state.selected==='core'||byId.get(state.selected)?.hub)return 1;
  return n.id===state.selected||n.core||neighbors(state.selected).some(o=>o.node.id===n.id)?1:n.hub?.65:.3;
@@ -54,6 +54,17 @@ function nav(){
   state.filter=button.dataset.chapter;clearFootsteps();selectNode(state.filter==='all'?'core':'chapter:'+state.filter,{open:false});
   $('lensLabel').textContent=state.filter==='all'?'All chapters':groups[state.filter].name;nav();
  });
+}
+function renderLocation(){
+ const node=byId.get(state.selected)||core,chapter=groups[node.group],host=$('readingBreadcrumb');
+ host.replaceChildren();
+ const home=document.createElement('button');home.type='button';home.textContent='Lyra';home.onclick=()=>{$('resetCamera').click();};host.append(home);
+ if(chapter){
+  const divider=document.createElement('span');divider.textContent='→';host.append(divider);
+  const parent=document.createElement('button');parent.type='button';parent.textContent=chapter.name;parent.onclick=()=>{state.filter=chapter.id;selectNode('chapter:'+chapter.id,{open:false});$('lensLabel').textContent=chapter.name;nav();};host.append(parent);
+ }
+ if(node.record){const detail=document.createElement('span');detail.textContent='→ '+node.name;host.append(detail);}
+ host.setAttribute('aria-label','Galaxy location: Lyra'+(chapter?', '+chapter.name:'')+(node.record?', '+node.name:''));
 }
 function storyPosition(){
  const index=Math.max(0,dataset.journey.indexOf(state.selected));
@@ -93,7 +104,7 @@ function selectNode(id,{open=true,keepPath=false}={}){
  if(!byId.has(id))return;if(!keepPath)clearFootsteps();
  const selected=byId.get(id);
  if(selected.record&&state.filter!=='all'&&state.filter!==selected.group){state.filter=selected.group;$('lensLabel').textContent=groups[state.filter].name;nav();}
- state.selected=id;renderInspector();storyPosition();if(open){state.rightCollapsed=false;}
+ state.selected=id;renderInspector();renderLocation();storyPosition();if(open){state.rightCollapsed=false;}
  panels();scene?.focus(byId.get(id));persist();
 }
 function clearFootsteps(){following=false;state.path=[];$('traceBanner').hidden=true;}
@@ -137,4 +148,4 @@ document.addEventListener('keydown',event=>{
 });
 preference.addEventListener('change',e=>{state.reducedMotion=e.matches;if(e.matches)state.paused=true;updateMotion();});
 scene=createScene({$,esc,state,nodes,edges,byId,core,rand,activeNode:n=>Boolean(n),activeEdge:()=>true,emphasis,selectNode,currentDate:()=>null,onZoom:value=>$('zoomLabel').textContent=Math.round(value*100)+'%',recordLabel:' curated records',tooltipLabel:n=>n.record?'Curated source paraphrase':n.hub?'Story chapter':'Interface centre · no private Core connection',coreCaption:'L E G A C Y'});
-nav();renderInspector();panels();storyPosition();updateMotion();
+nav();renderInspector();renderLocation();panels();storyPosition();updateMotion();

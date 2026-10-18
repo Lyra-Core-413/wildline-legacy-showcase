@@ -29,3 +29,17 @@
  .legacy:has(#navigationPanel:not([hidden])):has(#detailsPanel:not([hidden])) #navigationPanel{bottom:calc(50% + 6px)}
  .legacy:has(#navigationPanel:not([hidden])):has(#detailsPanel:not([hidden])) #detailsPanel{top:calc(50% + 6px)}
 }
+
+/* Shared public Nexus visual language; curated story and evidence stay separate. */
+.legacy .space{background:radial-gradient(ellipse at 12% 70%,#0a739d42,transparent 58%),radial-gradient(ellipse at 85% 28%,#7133aa55,transparent 62%),#040b20}
+.legacy .topbar{background:linear-gradient(100deg,#07152af0,#13102bf0);border-bottom-color:#98bce52e}
+.legacy .brand-sub a{color:inherit;text-decoration:none}.legacy .brand-sub a:hover{color:#c1e8ff}
+.legacy .legacy-panel{background:linear-gradient(150deg,#111e36e8,#0b1429e6);border-color:#99b8e544;box-shadow:0 18px 55px #02081750;backdrop-filter:blur(12px)}
+.legacy .reading-breadcrumb{position:absolute;z-index:6;top:80px;left:50%;transform:translateX(-50%);display:flex;gap:7px;align-items:center;justify-content:center;flex-wrap:wrap;max-width:calc(100% - 570px);padding:7px 11px;border:1px solid #88b8e139;border-radius:20px;background:#071226d9;color:#b3cbed;font-size:10px;line-height:1.5;text-align:center;backdrop-filter:blur(9px)}
+.legacy .reading-breadcrumb button{border:0;border-radius:15px;background:#8db8ff16;color:#d6e9ff;font-size:10px;padding:6px 10px;min-height:30px;cursor:pointer}
+.legacy .reading-breadcrumb button:hover{background:#96bfff36}
+.legacy .footer a{color:#a5c5e6;text-decoration:none}.legacy .footer a:hover{color:#dcf2ff}
+.legacy .trace-banner{top:auto;bottom:155px;max-width:min(500px,calc(100% - 40px))}
+@media(max-width:900px){.legacy .reading-breadcrumb{max-width:calc(100% - 60px);top:79px;font-size:9px}}
+@media(max-width:620px){.legacy .reading-breadcrumb{top:58px;max-width:calc(100% - 24px);width:max-content;gap:4px;font-size:8px;padding:4px 8px}.legacy .reading-breadcrumb button{font-size:9px;min-height:32px;padding:4px 8px}.legacy-panel{top:201px}.legacy .reading-breadcrumb>span:last-child{max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+@media(max-width:620px){.legacy .trace-banner{left:92px;right:12px;width:auto;max-width:none;transform:none;font-size:8px}}

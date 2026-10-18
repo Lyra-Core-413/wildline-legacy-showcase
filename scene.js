@@ -1,19 +1,23 @@
+import {layoutReadingRoom} from './reading-layout.js';
 // Adapted directly from the approved Galaxy prototype's spatial scene.
 // Canvas projects 3D world coordinates, depth-sorts stars and curves their links.
 export function createScene(context){
  const {$,esc,state,nodes,edges,byId,core,rand,activeNode,activeEdge,emphasis,selectNode,currentDate,onZoom,recordLabel=' demo records',tooltipLabel=n=>n.core_record?'Core record':'fictional record',coreCaption='C O R E'}=context;
 const canvas=$('graphCanvas'),ctx=canvas.getContext('2d');
 let gw=800,gh=700,dpr=1,hitNodes=[],drag=null,motionTime=0,lastFrame=0;
+let frameLayout=null,visualPoints=null,transitionFrom=null,transitionStarted=0;
 let cameraFocus={x:0,y:0,z:0},targetFocus={x:0,y:0,z:0},targetZoom=1;
 const skyDust=Array.from({length:410},()=>{const a=rand()*Math.PI*2,r=140+rand()*340;return{x:Math.cos(a)*r,y:Math.sin(a)*r*.67,z:(rand()-.5)*270,r:.35+rand()*.85,phase:rand()*6.28,color:rand()>.7?'#b399f5':'#79aadb'};});
 function rgba(hex,a){const h=hex.replace('#','');return `rgba(${parseInt(h.slice(0,2),16)},${parseInt(h.slice(2,4),16)},${parseInt(h.slice(4,6),16)},${a})`;}
 function resizeGraph(){const rect=$('graphWorld').getBoundingClientRect();gw=Math.max(2,rect.width);gh=Math.max(2,rect.height);dpr=Math.min(window.devicePixelRatio||1,2);canvas.width=Math.round(gw*dpr);canvas.height=Math.round(gh*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);}
 function projection(p){
+ if(p.id&&frameLayout?.points.has(p.id))return frameLayout.points.get(p.id);
  const cy=Math.cos(state.yaw),sy=Math.sin(state.yaw),cp=Math.cos(state.pitch),sp=Math.sin(state.pitch);
  const px=p.x-cameraFocus.x,py=p.y-cameraFocus.y,pz=p.z-cameraFocus.z;
  let x=px*cy-pz*sy,z=px*sy+pz*cy,y=py*cp-z*sp;z=py*sp+z*cp;
  const base=Math.min(gw/850,Math.max(115,gh-205)/660);
  const scale=base*state.zoom*940/Math.max(250,940+z);
+ if(frameLayout?.context){const c=frameLayout.points.get(core.id);return{x:c.x+x*scale*.34,y:c.y+y*scale*.34,z,scale:scale*.34};}
  return{x:gw*.5+x*scale,y:gh*.49+y*scale,z,scale};
 }
 function glow(x,y,r,color,strength=.35){if(r<=0)return;const grad=ctx.createRadialGradient(x,y,0,x,y,r);grad.addColorStop(0,rgba(color,strength));grad.addColorStop(.22,rgba(color,strength*.52));grad.addColorStop(.6,rgba(color,strength*.1));grad.addColorStop(1,rgba(color,0));ctx.fillStyle=grad;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();}
@@ -27,14 +31,14 @@ function drawConnection(e,points){const na=byId.get(e.a),nb=byId.get(e.b);if(!na
  const historic=Boolean(e.invalid_at&&e.invalid_at<=currentDate());if(historic)alpha*=.38;
  const color=onPath?'#d8c3ff':e.kind==='inferred'?'#c99eee':historic?'#9cabc8':e.kind==='proposed'?'#e9c087':nb.color;
  ctx.save();ctx.globalAlpha=alpha;ctx.strokeStyle=color;ctx.lineWidth=onPath?1.6:na.core?1.2:e.kind==='structural'?.6:.85;
- if(e.kind==='inferred')ctx.setLineDash([4,5]);if(e.kind==='proposed')ctx.setLineDash([2,7]);if(historic)ctx.setLineDash([1,5]);
+ if(e.kind==='structural')ctx.setLineDash([3,8]);if(e.kind==='inferred')ctx.setLineDash([4,5]);if(e.kind==='proposed')ctx.setLineDash([2,7]);if(historic)ctx.setLineDash([1,5]);
  const curve=traceCurve(a,b,na.core?.17:e.kind==='structural'?.055:.16);
  if(onPath){ctx.shadowColor=color;ctx.shadowBlur=12;}
  ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.quadraticCurveTo(curve.x,curve.y,b.x,b.y);ctx.stroke();ctx.restore();
  if(onPath){let t=(motionTime*.00013+edges.indexOf(e)*.17)%1;if(state.paused)t=.53;const p=curvePoint(a,curve,b,t);glow(p.x,p.y,10,color,.5);ctx.fillStyle='#f2eaff';ctx.beginPath();ctx.arc(p.x,p.y,1.8,0,Math.PI*2);ctx.fill();}
 }
 function writeLabel(text,x,y,font,color,align='center'){ctx.font=font;if(align==='center'){const w=ctx.measureText(text).width;x=Math.max(w/2+8,Math.min(gw-w/2-8,x));}ctx.textAlign=align;ctx.textBaseline='middle';ctx.shadowColor='#020715';ctx.shadowBlur=6;ctx.fillStyle=color;ctx.fillText(text,x,y);ctx.shadowBlur=0;}
-function drawNode(n,p){const compact=false;const selected=n.id===state.selected,hover=n.id===state.hover;const alpha=emphasis(n);ctx.save();ctx.globalAlpha=alpha;let r=n.r*p.scale;if(n.core)r=Math.max(compact?13:29,r);else if(n.hub)r=Math.max(compact?5:13,r);else r=Math.max(compact?.7:n.minor?1.2:2.8,r);
+function drawNode(n,p){const compact=Boolean(frameLayout?.context&&!n.core&&n.group!==frameLayout.focusGroup);const selected=n.id===state.selected,hover=n.id===state.hover;const alpha=emphasis(n);ctx.save();ctx.globalAlpha=alpha;let r=n.r*p.scale;if(n.core)r=Math.max(compact?13:29,r);else if(n.hub)r=Math.max(compact?5:13,r);else r=Math.max(compact?.7:n.minor?1.2:2.8,r);
  if(n.core||n.hub){
   glow(p.x,p.y,r*(n.core?2.3:2.4),n.color,n.core?.46:.31);
   const sphere=ctx.createRadialGradient(p.x-r*.3,p.y-r*.35,r*.03,p.x,p.y,r);sphere.addColorStop(0,rgba(n.color,n.core?.39:.63));sphere.addColorStop(.24,rgba(n.color,.19));sphere.addColorStop(.67,'rgba(8,16,40,.94)');sphere.addColorStop(1,rgba(n.color,.36));ctx.fillStyle=sphere;ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fill();
@@ -58,7 +62,21 @@ function drawNode(n,p){const compact=false;const selected=n.id===state.selected,
  }
  ctx.restore();hitNodes.push({n,p,r});
 }
-function paintScene(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,gw,gh);hitNodes=[];if(gw<5||gh<5)return;const c=projection(core);glow(c.x,c.y,Math.min(gw,gh)*.39,'#6478d3',.11);drawOrbits();const points=new Map(nodes.map(n=>[n.id,projection(n)]));for(const e of edges)drawConnection(e,points);const sorted=nodes.filter(activeNode).sort((a,b)=>points.get(b.id).z-points.get(a.id).z);for(const n of sorted)drawNode(n,points.get(n.id));}
+function paintScene(){
+ ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,gw,gh);hitNodes=[];if(gw<5||gh<5)return;
+ frameLayout=layoutReadingRoom(nodes,{width:gw,height:gh,time:motionTime,yaw:state.yaw,pitch:state.pitch,zoom:state.zoom,selected:state.selected});
+ if(transitionFrom&&!state.reducedMotion&&!state.paused){
+  const t=Math.min(1,Math.max(0,(performance.now()-transitionStarted)/700)),ease=t*t*(3-2*t);
+  frameLayout.points=new Map([...frameLayout.points].map(([id,to])=>{const from=transitionFrom.get(id)||to;return[id,Object.fromEntries(['x','y','z','scale'].map(key=>[key,from[key]+(to[key]-from[key])*ease]))];}));
+  if(t===1)transitionFrom=null;
+ }else transitionFrom=null;
+ visualPoints=frameLayout.points;
+ const c=projection(core);glow(c.x,c.y,Math.min(gw,gh)*.39,'#6478d3',.11);drawOrbits();
+ const points=new Map(nodes.map(n=>[n.id,projection(n)]));for(const e of edges)drawConnection(e,points);
+ const sorted=nodes.filter(activeNode).sort((a,b)=>points.get(b.id).z-points.get(a.id).z);for(const n of sorted)drawNode(n,points.get(n.id));
+ canvas.dataset.visibleEntities=String(sorted.length);canvas.dataset.focusGroup=frameLayout.focusGroup||'all';canvas.dataset.coreX=c.x.toFixed(2);canvas.dataset.coreY=c.y.toFixed(2);
+}
+
 function drawCore(p,r){
  const clock=motionTime*.00016,activity=state.busy?1.5:state.selected!=='core'?1.12:1;
  const breath=state.reducedMotion?1:1+.035*Math.sin(motionTime*.0012);
@@ -98,7 +116,7 @@ function pointerPosition(event){const rect=canvas.getBoundingClientRect();return
 canvas.addEventListener('pointerdown',e=>{
  if(e.button!==0||!e.isPrimary)return;
  const p=pointerPosition(e);canvas.focus({preventScroll:true});
- drag={id:e.pointerId,startX:p.x,startY:p.y,moved:false};
+ transitionFrom=null;drag={id:e.pointerId,startX:p.x,startY:p.y,moved:false};
  targetFocus={...cameraFocus};state.begin(p.x,p.y,e.timeStamp);canvas.setPointerCapture(e.pointerId);$('graphTooltip').hidden=true;
 });
 canvas.addEventListener('pointermove',e=>{
@@ -128,8 +146,8 @@ new ResizeObserver(resizeGraph).observe($('graphWorld'));
 window.addEventListener('resize',resizeGraph);
 
 
- function focus(n){targetFocus={x:n.x*.85,y:n.y*.85,z:n.z*.85};targetZoom=n.core||n.hub?1:1.4;onZoom(targetZoom);}
- function reset(){targetFocus={x:0,y:0,z:0};targetZoom=1;onZoom(1);}
+ function focus(n){transitionFrom=visualPoints?new Map(visualPoints):null;transitionStarted=performance.now();targetFocus={x:0,y:0,z:0};targetZoom=1;onZoom(targetZoom);}
+ function reset(){transitionFrom=visualPoints?new Map(visualPoints):null;transitionStarted=performance.now();targetFocus={x:0,y:0,z:0};targetZoom=1;onZoom(1);}
  function zoomBy(factor){targetZoom=Math.min(2.4,Math.max(.5,targetZoom*factor));onZoom(targetZoom);}
  resizeGraph();requestAnimationFrame(animate);
  return{focus,reset,zoomBy,resize:resizeGraph};

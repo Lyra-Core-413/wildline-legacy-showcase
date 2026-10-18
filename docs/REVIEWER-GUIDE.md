@@ -12,6 +12,10 @@ Open **https://lyra-core-413.github.io/wildline-legacy-showcase/**. The Reading 
 
 The dataset is approved, curated presentation material. It is separate from the private Nexus and makes no live Bee, Core, Graphiti or model call.
 
+The central LYRA context, chapter constellations and nested record orbits follow the Nexus presentation on the [MorrowWeave website](https://morrowweave.com/). Open or close the chapter and story panels to give the map more room. These orbital groups are navigation, not new evidence links. Of the 11 labeled record relationships, three are documented references and eight are thematic reading connections; source inspection retains that distinction.
+
+For the separate public product illustration, open the [Nexus concept journey](https://morrowweave.com/#galaxy): 120 fictional nodes, 175 illustrative connections and eight phases. It is not this curated 21-record chapter, private source history or a larger set of verified historical relationships. Matching the presentation does not connect the datasets or enable background synchronization. See [Public Nexus presentation boundaries](PUBLIC-NEXUS-SYNC.md).
+
 ## Examine the code demonstrations separately
 
 **Bee track:** https://github.com/Lyra-Core-413/wildline-bee-bridge-public. Public source can be read and downloaded without reviewer invitations. Follow that repository's package-specific Windows setup and integrity instructions. Its offline demonstration uses fictional data; an optional live Fact read requires the operator's own Bee account, pinned external CLI and explicit consent. No private data or account access is supplied.
@@ -32,6 +36,6 @@ Authorship, correction, privacy and unanswered questions remain part of the desi
 
 ## Reproducibility
 
-The [root README](../README.md#run-this-static-source-locally) explains local static serving. The Devpost Galaxy ZIP is a separate snapshot of source commit `846b438e6dd269a6457e61b138eeffdd4c02618e`, with its own instructions and checksums. This README/logo update does not change that ZIP or runtime source.
+The [root README](../README.md#run-this-static-source-locally) explains local static serving. The Devpost Galaxy ZIP is a separate snapshot of source commit `846b438e6dd269a6457e61b138eeffdd4c02618e`, with its own instructions and checksums. This Nexus presentation update does not replace or change that ZIP. Retained test counts describe their original component and revision; they do not verify the current visual layout.
 
 Updated October 18, 2026. No new live Bee, private Core ingestion, model call, second-computer acceptance or final hackathon submission occurred in this update.

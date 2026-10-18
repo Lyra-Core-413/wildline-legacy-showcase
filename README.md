@@ -8,7 +8,7 @@ What if the people you love could understand not only what happened in your life
 
 **MorrowWeave** is the venture. **Project Wildline** is the continuity project. **Lyra Nexus** is the memory-observatory interface. **Living Legacy** is the experience and longer-term product vision.
 
-**[Enter the Living Legacy Reading Room — explore the Galaxy map](https://lyra-core-413.github.io/wildline-legacy-showcase/)** · [Devpost project](https://devpost.com/software/wildline)
+**[Enter the Living Legacy Reading Room — explore the Galaxy map](https://lyra-core-413.github.io/wildline-legacy-showcase/)** · [MorrowWeave](https://morrowweave.com/) · [Devpost project](https://devpost.com/software/wildline)
 
 The current Reading Room is the Galaxy: 21 curated records and 11 labeled relationships across seven chapters. Select a star, inspect its source, or choose **Follow the Footsteps**. The public chapter explores how information overload led to the work called Wildline. Family access, broad synchronization and graph-aware conversation remain future capabilities. The LYRA launcher opens ChatGPT separately; Voice starts manually and receives no automatic map context.
 
@@ -16,7 +16,11 @@ The current Reading Room is the Galaxy: 21 curated records and 11 labeled relati
 
 The Reading Room is the interactive Galaxy map, rather than the earlier local Reading Room interface. Use **The whole journey**, chapter navigation, search, source inspection and **Follow the Footsteps**. Its chapters are Origins, Friction, Decisions, Growth, Building, Living Legacy and What Remains.
 
+The presentation follows the Nexus format on the MorrowWeave website: a rotating central LYRA context, chapter constellations and nested record orbits. The chapter and story panels remain collapsible. These visual groupings organize the existing records; they add no historical relationships. The 11 labeled record relationships comprise three documented references and eight thematic reading connections.
+
 The public chapter contains sourced paraphrases, interpretation, a documented correction and unknowns. Links support exploration; a line does not by itself establish causality. This approved presentation dataset is separate from Eric's private Nexus and does not fetch Bee or Core data.
+
+The [Nexus concept journey on morrowweave.com](https://morrowweave.com/#galaxy) is a separate illustration with 120 fictional nodes and 175 illustrative connections across eight phases. Its design is shared with this Reading Room; its fictional records do not replace or enlarge this 21-record curated chapter. This alignment does not enable automatic data synchronization. [Public Nexus presentation boundaries](docs/PUBLIC-NEXUS-SYNC.md).
 
 ## Why it began
 
@@ -46,7 +50,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 On Windows, `py -3 -m http.server 8000 --bind 127.0.0.1` is an alternative. Open `http://127.0.0.1:8000/` on the same computer. Opening `index.html` directly may block JSON loading. No model key, Bee account or paid service is needed.
 
-[Reviewer walkthrough](docs/REVIEWER-GUIDE.md) · [Brand assets](docs/BRANDING.md)
+[Reviewer walkthrough](docs/REVIEWER-GUIDE.md) · [Public Nexus presentation boundaries](docs/PUBLIC-NEXUS-SYNC.md) · [Brand assets](docs/BRANDING.md)
 
 ## What remains future work
 
@@ -56,8 +60,8 @@ The broader research question—whether governed continuity improves discovery o
 
 ## Status and evidence
 
-The hosted map was inspected on October 18, 2026, showing its 21-record/11-link overview and chapter controls. Earlier local checks retain their original scope; this documentation and logo update changes no runtime JavaScript, HTML, CSS or curated data. The earlier Devpost Galaxy ZIP remains a snapshot of commit `846b438e6dd269a6457e61b138eeffdd4c02618e`.
+The hosted map was inspected on October 18, 2026, showing its 21-record/11-link overview and chapter controls. Earlier local checks retain their original scope. The subsequent Nexus presentation alignment changes layout and appearance while preserving the approved curated dataset. The earlier Devpost Galaxy ZIP remains a snapshot of commit `846b438e6dd269a6457e61b138eeffdd4c02618e`; this update does not replace that archive.
 
-The MIT grants for the Reader and Bridge are separate from this Galaxy presentation. This README does not add a license grant for the Galaxy or its artwork. MorrowWeave is an independent personal venture; the Devpost entry remains a draft.
+The MIT grants for the Reader and Bridge are separate from this Galaxy presentation. This README does not add a license grant for the Galaxy or its artwork. MorrowWeave is an independent personal venture. This presentation update does not submit or change the submission status of the Devpost entry.
 
 **Continuity without captivity. Carry forward what matters. Keep the freedom to reconsider.**
