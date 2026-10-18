@@ -1,41 +1,63 @@
-# Project Wildline: continuity a person can question, correct and choose
+<p><img src="assets/branding/morrowweave-logo.png" alt="MorrowWeave company logo" width="420"></p>
 
-**A MorrowWeave Project.**
+<p><img src="assets/branding/wildline-logo.png" alt="Wildline project logo" width="280"></p>
 
-**Evidence and showcase status as of 2026-10-17.**
+# Wildline · Living Legacy by MorrowWeave
 
-I bought an Amazon Bee because I thought it looked cool. I was also buried in conversations, responsibilities and changing decisions. Organizing the captured information and connecting useful Bee context to ChatGPT grew into a Daily Command Center that helped me identify commitments, recover decisions and see what needed attention.
+What if the people you love could understand not only what happened in your life, but why it mattered—and how your understanding changed?
 
-Then the next conversation would begin, and too much of our working understanding had to be rebuilt. A fact might remain while the correction, disagreement or reason behind it became harder to recover.
+**MorrowWeave** is the venture. **Project Wildline** is the continuity project. **Lyra Nexus** is the memory-observatory interface. **Living Legacy** is the experience and longer-term product vision.
 
-That led to Lyra Core, a privately governed continuity system and reference implementation built around my own life. The progression continued through Lyra Nexus, an interactive continuity visualization environment, to the curated Living Legacy showcase. Project Wildline is the technology and hackathon project; MorrowWeave is the intended company and overarching venture. Wildline asks which mechanisms can travel to a new person without taking my history with them.
+**[Enter the Living Legacy Reading Room — explore the Galaxy map](https://lyra-core-413.github.io/wildline-legacy-showcase/)** · [Devpost project](https://devpost.com/software/wildline)
 
-**Portable constitution. Non-portable biography.**
+The current Reading Room is the Galaxy: 21 curated records and 11 labeled relationships across seven chapters. Select a star, inspect its source, or choose **Follow the Footsteps**. The public chapter explores how information overload led to the work called Wildline. Family access, broad synchronization and graph-aware conversation remain future capabilities. The LYRA launcher opens ChatGPT separately; Voice starts manually and receives no automatic map context.
 
-Our working rhythm is **411 Recover → 413 Challenge → 412 Reconstruct**. Recover relevant history and uncertainty, challenge a favorite interpretation, and carry forward what survives while leaving it open to correction. This changes external working context; it does not retrain the underlying model.
+## Explore the Galaxy
 
-## What is demonstrated
+The Reading Room is the interactive Galaxy map, rather than the earlier local Reading Room interface. Use **The whole journey**, chapter navigation, search, source inspection and **Follow the Footsteps**. Its chapters are Origins, Friction, Decisions, Growth, Building, Living Legacy and What Remains.
 
-The published [Wildline Continuity Reader](https://github.com/Lyra-Core-413/wildline-continuity-reader) is a small MIT-licensed, rule-based offline component. Fictional observations yield a source-qualified answer in a fresh process, with provenance, uncertainty and authority NONE. It contains no authenticated Bee adapter or personal Core history.
+The public chapter contains sourced paraphrases, interpretation, a documented correction and unknowns. Links support exploration; a line does not by itself establish causality. This approved presentation dataset is separate from Eric's private Nexus and does not fetch Bee or Core data.
 
-A separate private Bee bridge completed one founder-authorized genuine Fact read followed by recovery in another process. A separately preserved historical replay shows recorded correction, partial reconfirmation and deletion. Those are different proofs. Neither establishes universal live synchronization, independent second-computer compatibility or the complete Wildline product.
+## Why it began
 
-The [evidence ledger](https://github.com/Lyra-Core-413/wildline-continuity-reader/blob/main/docs/EVIDENCE-BOUNDARIES.md) keeps the artifacts and their limits explicit.
+Eric bought an Amazon Bee, then used Bee context and ChatGPT to build a Daily Command Center for conversations, commitments and changing responsibilities. Repeated reconstruction across conversations led to the private Lyra Core, then to Wildline's portable continuity mechanisms and the Nexus visualization.
 
-## The curated experience to examine
+Living Legacy asks what a person could choose to preserve for the people they love: experiences, decisions, relationships, corrections and growth, with the sources and uncertainty visible.
 
-Lyra Nexus is a separate experimental local memory observatory. Its existing private Core-history projection remains a private historical source, not the judge dataset.
+**411 Recover → 413 Challenge → 412 Reconstruct.** Recover the relevant history, challenge a favorite interpretation and carry forward what survives while leaving room to change.
 
-The separate **Hackathon Living Legacy Showcase** presents one deliberately selected chapter: how the need to manage overwhelming information became the work called Wildline. Its 21 approved records and 11 approved relationships distinguish sourced paraphrases, interpretations, a documented correction and unknowns. Thematic connections are labeled; a drawn relationship does not establish causality.
+## Separate working components
 
-The image and exact curated content received separate founder approval. Local browser checks verified rotation, search, selection, source inspection, collapsible panels and the Footsteps reading sequence. The page opens with both panels visible and The whole journey selected. The private Nexus data and existing sealed judge package remain separate.
+| Component | What to examine | Scope |
+| --- | --- | --- |
+| [Living Legacy Galaxy](https://lyra-core-413.github.io/wildline-legacy-showcase/) | Browser experience and curated chapter | Static presentation; no model or private account connection |
+| [Public Bee Bridge](https://github.com/Lyra-Core-413/wildline-bee-bridge-public) | Bee-track source, offline demo and optional consent-gated CLI adapter | Private records and operation receipts are excluded; no reviewer invitation needed to read code |
+| [Continuity Reader](https://github.com/Lyra-Core-413/wildline-continuity-reader) | Separate MIT-licensed Open Source contribution | Fictional, rule-based, offline fresh-process recovery |
 
-A ChatGPT launcher can open [chatgpt.com](https://chatgpt.com), where the user starts Voice manually. It does not transfer the graph or make Voice aware of the map. Graph-aware conversation is future work.
+The October 12 recorded Bee retrieval in the video is separate from the October 11 historical validation. A separately retained lifecycle replay is historical evidence, not a new live mutation. Component test counts do not belong to the Galaxy.
 
-## A chosen chapter, not a finished life
+## Run this static source locally
 
-Beyond the curated showcase, Living Legacy is a longer-term vision for preserving personally authored life history. A person could choose experiences, struggles, relationships, decisions, corrections and growth to preserve while keeping other material private. Imagine authorized family members exploring those selected sources through conversational AI. That future experience would require consent, authorship, audience permissions, source attribution, privacy and the ability to leave questions unanswered. The AI would not impersonate the person or claim undocumented personal knowledge. Later family reflections would need separate authorship and could never become new words or wishes attributed to the original person.
+Use the hosted Galaxy for immediate access. To inspect a local copy, clone or extract this repository, install Python 3 separately, and run in its root:
 
-The broader Reachable Unknown question remains a hypothesis: can sustained, accountable human–AI collaboration help people discover useful possibilities they would otherwise be less likely to reach? The founder's experience motivates the question. The bounded reader and Bee recovery do not prove the advantage.
+```sh
+python -m http.server 8000 --bind 127.0.0.1
+```
 
-**Continuity Without Captivity.** Carry forward what matters, with room to change.
+On Windows, `py -3 -m http.server 8000 --bind 127.0.0.1` is an alternative. Open `http://127.0.0.1:8000/` on the same computer. Opening `index.html` directly may block JSON loading. No model key, Bee account or paid service is needed.
+
+[Reviewer walkthrough](docs/REVIEWER-GUIDE.md) · [Brand assets](docs/BRANDING.md)
+
+## What remains future work
+
+The longer-term vision is for a living author to choose the history and audience they want, and for authorized loved ones to explore those sources through conversational AI. Family access, automatic source synchronization and graph-aware voice are not implemented in this static chapter. Later family reflections would retain separate authorship.
+
+The broader research question—whether governed continuity improves discovery over disconnected conversations—remains open. The current demonstrations do not establish that advantage.
+
+## Status and evidence
+
+The hosted map was inspected on October 18, 2026, showing its 21-record/11-link overview and chapter controls. Earlier local checks retain their original scope; this documentation and logo update changes no runtime JavaScript, HTML, CSS or curated data. The earlier Devpost Galaxy ZIP remains a snapshot of commit `846b438e6dd269a6457e61b138eeffdd4c02618e`.
+
+The MIT grants for the Reader and Bridge are separate from this Galaxy presentation. This README does not add a license grant for the Galaxy or its artwork. MorrowWeave is an independent personal venture; the Devpost entry remains a draft.
+
+**Continuity without captivity. Carry forward what matters. Keep the freedom to reconsider.**

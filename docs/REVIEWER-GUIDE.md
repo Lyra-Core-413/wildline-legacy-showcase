@@ -1,44 +1,37 @@
-# Wildline reviewer guide
+# MorrowWeave Living Legacy — reviewer guide
 
-**Evidence and local verification as of 2026-10-17.** Private review access and new live operations require their own authorization.
+## Start in the Galaxy Reading Room
 
-## Start with the bounded public component
+Open **https://lyra-core-413.github.io/wildline-legacy-showcase/**. The Reading Room is this interactive Galaxy map. It presents a curated chapter of the journey from Bee capture and daily information overload to continuity and the Living Legacy vision.
 
-Read the [public reader README](https://github.com/Lyra-Core-413/wildline-continuity-reader), then follow its existing [build guide](https://github.com/Lyra-Core-413/wildline-continuity-reader/blob/main/docs/BUILD-AND-TEST.md) and [demonstration guide](https://github.com/Lyra-Core-413/wildline-continuity-reader/blob/main/docs/DEMO-AND-VERIFICATION.md) at the revision being evaluated.
+1. Start with **The whole journey** for all 21 records and 11 labeled relationships.
+2. Select a chapter or use search to locate a footstep.
+3. Select a star and inspect its narrative and source.
+4. Choose **Follow the Footsteps** for a guided reading sequence.
+5. Compare source accounts, interpretation, correction and unknowns. A visual relationship is not automatically causal.
 
-It uses fictional evidence, runs offline and makes no Bee call. The separate reader process displays a recovered answer with source history, uncertainty and authority NONE. The retained public verification report records 48 fictional-data tests; this documentation task did not rerun them.
+The dataset is approved, curated presentation material. It is separate from the private Nexus and makes no live Bee, Core, Graphiti or model call.
 
-The public reader is not a model, a general assistant, an authenticated source connector or the whole Wildline architecture.
+## Examine the code demonstrations separately
 
-## Keep the private proof separate
+**Bee track:** https://github.com/Lyra-Core-413/wildline-bee-bridge-public. Public source can be read and downloaded without reviewer invitations. Follow that repository's package-specific Windows setup and integrity instructions. Its offline demonstration uses fictional data; an optional live Fact read requires the operator's own Bee account, pinned external CLI and explicit consent. No private data or account access is supplied.
 
-Authorized private reviewers may consult the existing sealed Bee bridge according to its own guide and reviewed revision. The retained October 11 record describes one authorized genuine Bee Fact read and distinct-process recovery. No personal Fact identifier, source body or private operation receipt belongs in this page.
+**Open Source contribution:** https://github.com/Lyra-Core-413/wildline-continuity-reader. The MIT-licensed Reader is fictional-only and rule-based. It recovers a source-qualified answer in a separate process. It does not include an authenticated Bee adapter or a complete legacy service.
 
-The historical lifecycle replay is another preserved artifact. It demonstrates recorded correction and deletion handling; it does not show those mutations happening live during the single-Fact acquisition.
+The retained 107 Bridge tests and 48 Reader tests describe their respective Windows packages. They are not Galaxy tests or a combined product score. Current documentation revisions do not claim a new supported Windows test run.
 
-The private package's manifest and anchor bind its exact files. The showcase is separate from that package; its existing seal does not cover new material. This guide grants no reviewer invitation or new Bee read.
+## Read the demo accurately
 
-## Showcase walkthrough and evidence limits
+[Devpost](https://devpost.com/software/wildline) contains the public video. The October 12 recorded retrieval and October 11 historical validation are separate operations. Recorded retrieval, historical lifecycle replay, fictional Nexus footage and future functionality remain distinct. Private operation receipts and personal Core history are not part of this static repository.
 
-The separate Hackathon Living Legacy Showcase presents 21 founder-approved records and 11 founder-approved relationships across seven chapters. Local browser verification covered rotation, search, selection, source inspection, panel controls, the complete overview and the Footsteps sequence. Both panels open with The whole journey selected.
+## Legacy model and future work
 
-The following remain reviewer criteria; the local checks do not establish every criterion for future revisions or deployed systems:
+Living Legacy is about personally selected experiences, relationships, decisions and changing understanding. The current Galaxy demonstrates one curated chapter. Family sharing, broader synchronization and conversation grounded in selected map context are future capabilities. The LYRA button opens ChatGPT separately; Voice is manual and receives no automatic map context.
 
-1. The exact curated dataset manifest has explicit approval distinct from image approval.
-2. The source label makes the curated source distinguishable from the existing private Core snapshot, static fiction and synthetic Graphiti tests.
-3. Selection reveals a supported source, author, available time/status and uncertainty; unknown values remain unknown.
-4. Original wording, later interpretation and historical correction remain distinguishable. A graph path is not described as causality without evidence.
-5. Search, selection, navigation, evidence inspection and any timeline behavior work in the actual browser.
-6. Revoked or excluded material cannot be recovered through search, cached endpoints or a derived view.
-7. The ordinary ChatGPT launcher opens only https://chatgpt.com; Voice is manual and has no automatic map context.
-8. The private Nexus still behaves as its separately authorized local system, and the sealed judge package is unchanged.
+Authorship, correction, privacy and unanswered questions remain part of the design. The AI should not impersonate the person or invent undocumented knowledge. Later family reflections must retain separate authorship.
 
-Offline verification of the local Nexus build recorded 178 Python and 48 JavaScript passes. These are separate from the public reader's retained historical test count. Export tests used fictional fixtures and checked explicit static-file allowlisting, rejection of unsupported/private fields and missing or changed approvals, and exclusion of private runtime/API files. The approved curated dataset passed validation. This does not establish a general cache-purge or dynamic revocation mechanism. A deployed static release still needs its own browser check.
+## Reproducibility
 
-## What remains future work
+The [root README](../README.md#run-this-static-source-locally) explains local static serving. The Devpost Galaxy ZIP is a separate snapshot of source commit `846b438e6dd269a6457e61b138eeffdd4c02618e`, with its own instructions and checksums. This README/logo update does not change that ZIP or runtime source.
 
-Graph-aware Voice needs an explicit selected-context transfer design and proof. Broad private synchronization needs incremental permissions, change/deletion handling and source-specific validation. Family legacy needs audience consent, authorship separation and lawful source rights.
-
-No current artifact establishes a clinical workflow, autonomous action, model retraining, device-origin attribution, a measured relational discovery advantage or independent testing on a second physical computer.
-
-Use the [claims ledger](https://github.com/Lyra-Core-413/wildline-continuity-reader/blob/main/docs/EVIDENCE-BOUNDARIES.md) and [roadmap](https://github.com/Lyra-Core-413/wildline-continuity-reader/blob/main/docs/ROADMAP-AND-VISION.md) when assessing broader claims.
+Updated October 18, 2026. No new live Bee, private Core ingestion, model call, second-computer acceptance or final hackathon submission occurred in this update.
