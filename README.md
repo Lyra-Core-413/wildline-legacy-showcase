@@ -10,7 +10,7 @@ What if the people you love could understand not only what happened in your life
 
 **[Enter the Living Legacy Reading Room — explore the Galaxy map](https://lyra-core-413.github.io/wildline-legacy-showcase/)** · [MorrowWeave](https://morrowweave.com/) · [Devpost project](https://devpost.com/software/wildline)
 
-The current Reading Room is the Galaxy: 21 curated records and 11 labeled relationships across seven chapters. Select a star, inspect its source, or choose **Follow the Footsteps**. The public chapter explores how information overload led to the work called Wildline. Family access, broad synchronization and graph-aware conversation remain future capabilities. The LYRA launcher opens ChatGPT separately; Voice starts manually and receives no automatic map context.
+The current Reading Room is the Galaxy: 21 curated records and 11 labeled relationships across seven chapters. Select a star, inspect its source, or choose **Follow the Footsteps**. The public chapter explores how information overload led to the work called Wildline. Family access, broad public synchronization and graph-aware conversation remain future capabilities for this static presentation. The LYRA launcher opens ChatGPT separately; Voice starts manually and receives no automatic map context.
 
 ## Explore the Galaxy
 
@@ -52,6 +52,10 @@ On Windows, `py -3 -m http.server 8000 --bind 127.0.0.1` is an alternative. Open
 
 [Reviewer walkthrough](docs/REVIEWER-GUIDE.md) · [Public Nexus presentation boundaries](docs/PUBLIC-NEXUS-SYNC.md) · [Brand assets](docs/BRANDING.md)
 
+## Private prototype progress
+
+The separate owner-only Personal Galaxy now uses open constellation clusters, restrained connections and labels, local source inspection, Threads, Timeline, reversible identity review and a read-only Command Center with conflict flags. Permitted polling and owner phone access operate privately; neither public map connects to that environment. [October 18 audit: implemented behavior, verification and limits](docs/PRIVATE-NEXUS-PROGRESS.md). These private results are supplementary context, not features or test results of this public package.
+
 ## What remains future work
 
 The longer-term vision is for a living author to choose the history and audience they want, and for authorized loved ones to explore those sources through conversational AI. Family access, automatic source synchronization and graph-aware voice are not implemented in this static chapter. Later family reflections would retain separate authorship.
@@ -60,8 +64,9 @@ The broader research question—whether governed continuity improves discovery o
 
 ## Status and evidence
 
-The hosted map was inspected on October 18, 2026, showing its 21-record/11-link overview and chapter controls. Earlier local checks retain their original scope. The subsequent Nexus presentation alignment changes layout and appearance while preserving the approved curated dataset. The current October 18 Devpost Nexus Sync ZIP is a snapshot of commit `cfc65f7c2ae67339bd4231ff66aa365b7ae3ec20`; this documentation correction preserves that archive; later default-branch documentation is not part of its bytes.
+The hosted map was inspected on October 18, 2026, showing its 21-record/11-link overview and chapter controls. Earlier local checks retain their original scope. The subsequent Nexus presentation alignment changes layout and appearance while preserving the approved curated dataset. The current October 18 Devpost Nexus Sync ZIP is a snapshot of commit `cfc65f7c2ae67339bd4231ff66aa365b7ae3ec20`; this documentation update preserves that archive; later default-branch notes are not part of its bytes.
 
 The MIT grants for the Reader and Bridge are separate from this Galaxy presentation. This README does not add a license grant for the Galaxy or its artwork. MorrowWeave is an independent personal venture. This presentation update does not submit or change the submission status of the Devpost entry.
 
 **Continuity without captivity. Carry forward what matters. Keep the freedom to reconsider.**
+

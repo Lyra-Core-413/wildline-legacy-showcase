@@ -30,12 +30,17 @@ The retained 107 Bridge tests and 48 Reader tests describe their respective Wind
 
 ## Legacy model and future work
 
-Living Legacy is about personally selected experiences, relationships, decisions and changing understanding. The current Galaxy demonstrates one curated chapter. Family sharing, broader synchronization and conversation grounded in selected map context are future capabilities. The LYRA button opens ChatGPT separately; Voice is manual and receives no automatic map context.
+Living Legacy is about personally selected experiences, relationships, decisions and changing understanding. The current Galaxy demonstrates one curated chapter. Family sharing, broader public synchronization and conversation grounded in selected map context remain future capabilities for this public chapter. Permitted polling and owner-only phone access work separately in the private prototype; they are not supplied by this judge package. The LYRA button opens ChatGPT separately; Voice is manual and receives no automatic map context.
 
 Authorship, correction, privacy and unanswered questions remain part of the design. The AI should not impersonate the person or invent undocumented knowledge. Later family reflections must retain separate authorship.
 
+## Private progress is supplementary
+
+The [sanitized private Galaxy audit update](PRIVATE-NEXUS-PROGRESS.md) describes cluster navigation, identity review, task-conflict handling and local verification, together with unresolved review and performance limits. It contains no private records or access instructions. These private implementation results are not public-package tests or a new Open Source contribution. A documented source pointer does not establish the truth of its underlying claim.
+
 ## Reproducibility
 
-The [root README](../README.md#run-this-static-source-locally) explains local static serving. The current October 18 Devpost Nexus Sync ZIP is a separate snapshot of source commit `cfc65f7c2ae67339bd4231ff66aa365b7ae3ec20`, with its own instructions and checksums. This documentation correction does not replace or change that ZIP; later default-branch documentation is not included retroactively. Retained test counts describe their original component and revision; they do not verify the current visual layout.
+The [root README](../README.md#run-this-static-source-locally) explains local static serving. The current October 18 Devpost Nexus Sync ZIP is a separate snapshot of source commit `cfc65f7c2ae67339bd4231ff66aa365b7ae3ec20`, with its own instructions and checksums. This Nexus presentation update does not replace or change that ZIP. Retained test counts describe their original component and revision; they do not verify the current visual layout.
 
-Updated October 18, 2026. No new live Bee, private Core ingestion, model call, second-computer acceptance or final hackathon submission occurred in this update.
+Updated October 19, 2026. This documentation update makes no live Bee/Core or model call and does not submit, withdraw or resubmit the existing entry. Later default-branch documentation is not included retroactively in the attached ZIP.
+
