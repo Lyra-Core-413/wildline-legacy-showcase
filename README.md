@@ -60,7 +60,7 @@ The broader research question—whether governed continuity improves discovery o
 
 ## Status and evidence
 
-The hosted map was inspected on October 18, 2026, showing its 21-record/11-link overview and chapter controls. Earlier local checks retain their original scope. The subsequent Nexus presentation alignment changes layout and appearance while preserving the approved curated dataset. The earlier Devpost Galaxy ZIP remains a snapshot of commit `846b438e6dd269a6457e61b138eeffdd4c02618e`; this update does not replace that archive.
+The hosted map was inspected on October 18, 2026, showing its 21-record/11-link overview and chapter controls. Earlier local checks retain their original scope. The subsequent Nexus presentation alignment changes layout and appearance while preserving the approved curated dataset. The current October 18 Devpost Nexus Sync ZIP is a snapshot of commit `cfc65f7c2ae67339bd4231ff66aa365b7ae3ec20`; this documentation correction preserves that archive; later default-branch documentation is not part of its bytes.
 
 The MIT grants for the Reader and Bridge are separate from this Galaxy presentation. This README does not add a license grant for the Galaxy or its artwork. MorrowWeave is an independent personal venture. This presentation update does not submit or change the submission status of the Devpost entry.
 

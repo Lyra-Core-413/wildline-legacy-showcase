@@ -36,6 +36,6 @@ Authorship, correction, privacy and unanswered questions remain part of the desi
 
 ## Reproducibility
 
-The [root README](../README.md#run-this-static-source-locally) explains local static serving. The Devpost Galaxy ZIP is a separate snapshot of source commit `846b438e6dd269a6457e61b138eeffdd4c02618e`, with its own instructions and checksums. This Nexus presentation update does not replace or change that ZIP. Retained test counts describe their original component and revision; they do not verify the current visual layout.
+The [root README](../README.md#run-this-static-source-locally) explains local static serving. The current October 18 Devpost Nexus Sync ZIP is a separate snapshot of source commit `cfc65f7c2ae67339bd4231ff66aa365b7ae3ec20`, with its own instructions and checksums. This documentation correction does not replace or change that ZIP; later default-branch documentation is not included retroactively. Retained test counts describe their original component and revision; they do not verify the current visual layout.
 
 Updated October 18, 2026. No new live Bee, private Core ingestion, model call, second-computer acceptance or final hackathon submission occurred in this update.

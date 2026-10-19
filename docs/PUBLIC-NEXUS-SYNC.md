@@ -21,7 +21,7 @@ The approved `legacy-data.json` remains the Reading Room's source. The website's
 
 The LYRA launcher continues to open ChatGPT separately. It does not transfer selected records or map context, and Voice starts manually.
 
-The earlier Devpost Galaxy ZIP remains an archived snapshot of commit `846b438e6dd269a6457e61b138eeffdd4c02618e`. The current hosted presentation and that archive should be evaluated at their respective revisions. This update does not replace the archive or change the Devpost submission status.
+The current October 18 Devpost Nexus Sync ZIP remains an archived snapshot of commit `cfc65f7c2ae67339bd4231ff66aa365b7ae3ec20`. The current hosted presentation and that archive should be evaluated at their respective revisions. This documentation correction does not replace the archive or submit, withdraw or resubmit the existing Devpost entry.
 
 The Reader and Bee Bridge retain their own licenses and test results. This document grants no new license for the Galaxy presentation or artwork and does not combine component test counts into a product-wide result.
 # Reproduce the presentation checks
