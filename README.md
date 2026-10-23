@@ -38,7 +38,7 @@ Living Legacy asks what a person could choose to preserve for the people they lo
 | [Public Bee Bridge](https://github.com/Lyra-Core-413/wildline-bee-bridge-public) | Bee-track source, offline demo and optional consent-gated CLI adapter | Private records and operation receipts are excluded; no reviewer invitation needed to read code |
 | [Continuity Reader](https://github.com/Lyra-Core-413/wildline-continuity-reader) | Separate MIT-licensed Open Source contribution | Fictional, rule-based, offline fresh-process recovery |
 
-The October 12 recorded Bee retrieval in the video is separate from the October 11 historical validation. A separately retained lifecycle replay is historical evidence, not a new live mutation. Component test counts do not belong to the Galaxy.
+The recorded Bee retrieval described in the video linked from Devpost is separate from the founder-authorized October 11 private validation. A separately retained lifecycle sequence is historical replay, not a new live Bee mutation. Neither repeated presentation of one Fact nor a single authenticated Fact read establishes independent corroboration, continuous synchronization or verified recording-device origin. Component test counts do not belong to the Galaxy.
 
 ## Run this static source locally
 
