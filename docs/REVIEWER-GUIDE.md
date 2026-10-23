@@ -26,7 +26,7 @@ The retained 107 Bridge tests and 48 Reader tests describe their respective Wind
 
 ## Read the demo accurately
 
-[Devpost](https://devpost.com/software/wildline) contains the public video. The October 12 recorded retrieval and October 11 historical validation are separate operations. Recorded retrieval, historical lifecycle replay, fictional Nexus footage and future functionality remain distinct. Private operation receipts and personal Core history are not part of this static repository.
+[Devpost](https://devpost.com/software/wildline) is the source of the public demonstration video judges receive; older transcript snapshots and local preview files are not substitutes for that linked upload. The recorded Bee retrieval described in the project is separate from the founder-authorized October 11 private validation. Historical correction, partial reconfirmation and deletion are replay evidence, not a newly performed live mutation; repeated presentation of the same Fact is not independent corroboration. A single authenticated Fact read does not independently authenticate the physical recording device or establish ongoing synchronization. The public Galaxy is a separate curated presentation, not a live Bee or Core data interface. Private operation receipts and personal Core history are not distributed in this repository.
 
 ## Legacy model and future work
 
@@ -42,5 +42,5 @@ The [sanitized private Galaxy audit update](PRIVATE-NEXUS-PROGRESS.md) describes
 
 The [root README](../README.md#run-this-static-source-locally) explains local static serving. The current October 18 Devpost Nexus Sync ZIP is a separate snapshot of source commit `cfc65f7c2ae67339bd4231ff66aa365b7ae3ec20`, with its own instructions and checksums. This Nexus presentation update does not replace or change that ZIP. Retained test counts describe their original component and revision; they do not verify the current visual layout.
 
-Updated October 19, 2026. This documentation update makes no live Bee/Core or model call and does not submit, withdraw or resubmit the existing entry. Later default-branch documentation is not included retroactively in the attached ZIP.
+Updated October 22, 2026, for cross-project description consistency only. This documentation update makes no live Bee/Core or model call and does not change the video, MorrowWeave website, the sealed Bridge/Reader packages or the submitted Devpost entry. Later default-branch documentation is not included retroactively in the attached ZIP.
 
